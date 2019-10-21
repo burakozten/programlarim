@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-21 07:41:31 &#214;S"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLU03RzVEQjE7MjAxOS0xMC0yMTswNzozMjowOCDDllM7MjgyNw=="/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLU03RzVEQjE7MjAxOS0xMC0yMTswNzo0MTozMSDDllM7MjsyOTMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="B&#304;R &#214;&#286;RENC&#304;N&#304;N V&#304;ZE VE F&#304;NAL NOTLARINI HESAPLAYARAK DERSTEN GE&#199;&#304;P KALMA DURUMUNU BULAN PROGRAM."/>
+            <declare name="vize, final, vizeyuzde, finalyuzde, ortalama" type="Integer" array="False" size=""/>
+            <output expression="&quot;vizeden ka&#231; ald&#305;n&#305;z?&quot;" newline="True"/>
+            <input variable="vize"/>
+            <output expression="&quot;finalden ka&#231; ald&#305;n&#305;z?&quot;" newline="True"/>
+            <input variable="final"/>
+            <assign variable="vizeyuzde" expression="vize*0.4"/>
+            <assign variable="finalyuzde" expression="final*0.6"/>
+            <assign variable="ortalama" expression="vizeyuzde+finalyuzde"/>
+            <if expression="ortalama&gt;=50">
+                <then>
+                    <output expression="&quot; tebrikler dersten ge&#231;tiiz notunuz &quot; &amp; ortalama" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot; dersten kald&#305;n&#305;z notunuz &quot; &amp; ortalama" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

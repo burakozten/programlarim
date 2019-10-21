@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-21 07:57:38 &#214;S"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLU03RzVEQjE7MjAxOS0xMC0yMTswNzo1MjozNSDDllM7MjgyOQ=="/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLU03RzVEQjE7MjAxOS0xMC0yMTswNzo1NzozOCDDllM7MTsyOTQ1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="KLAYEDEN G&#304;R&#304;LEN &#304;K&#304; SAYIDAN B&#220;Y&#220;KL&#220;K K&#220;&#199;&#220;KL&#220;K VE E&#350;&#304;TL&#304;K DURUMUNU &#304;NVELEYEN PROGRAM"/>
+            <declare name="sayi1, sayi2" type="Integer" array="False" size=""/>
+            <output expression="&quot;birinci say&#305;y&#305; girin.&quot;" newline="True"/>
+            <input variable="sayi1"/>
+            <output expression="&quot;ikinci say&#305;y&#305; girin&quot;" newline="True"/>
+            <input variable="sayi2"/>
+            <if expression="sayi1=sayi2">
+                <then>
+                    <output expression="&quot;iki say&#305; birbirine e&#351;ittir&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="sayi1&gt;sayi2">
+                        <then>
+                            <output expression="&quot;birinci say&#305; ikinci say&#305;dan b&#252;y&#252;kt&#252;r&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;ikinci say&#305; birinci say&#305;dan b&#252;y&#252;kt&#252;r&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

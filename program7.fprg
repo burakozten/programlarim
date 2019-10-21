@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-21 08:54:18 &#214;S"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLU03RzVEQjE7MjAxOS0xMC0yMTswODoyMTozMiDDllM7MjgyMw=="/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLU03RzVEQjE7MjAxOS0xMC0yMTswODo1NDoxOCDDllM7MTsyOTQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="4 BASAMAKLI B&#304;R SAYININ BASAMAKLARINI KARELER&#304;N&#304; TOPLAYAN PROGRAM"/>
+            <declare name="sayi, birler, onlar, yuzler, binler, toplam, uzunluk" type="Integer" array="False" size=""/>
+            <output expression="&quot;4 basamakl&#305; bir say&#305; girin&quot;" newline="True"/>
+            <do expression="uzunluk!=4">
+                <input variable="sayi"/>
+                <assign variable="uzunluk" expression="Len(ToString(sayi))"/>
+                <if expression="uzunluk==4">
+                    <then>
+                        <assign variable="birler" expression="sayi%10"/>
+                        <assign variable="onlar" expression="(sayi/10)%10"/>
+                        <assign variable="yuzler" expression="(sayi/100)%10"/>
+                        <assign variable="binler" expression="sayi/1000"/>
+                        <assign variable="toplam" expression="(birler*birler)+(onlar*onlar)+(yuzler*yuzler)+(binler*binler)"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;4 basamakl&#305; say&#305; girin!!&quot;" newline="True"/>
+                    </else>
+                </if>
+            </do>
+            <output expression="toplam" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

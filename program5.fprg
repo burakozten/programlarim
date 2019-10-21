@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-21 08:07:25 &#214;S"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLU03RzVEQjE7MjAxOS0xMC0yMTswNzo1ODowNiDDllM7MjgzMw=="/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLU03RzVEQjE7MjAxOS0xMC0yMTswODowNzoyNSDDllM7MTsyOTM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="B&#304;R &#214;&#286;RENC&#304;N&#304;N TAKD&#304;R TE&#350;EKK&#220;R ALMA VE SINIFI GE&#199;ME KALMA DURUMUNU &#304;NCELEYEN PROGRAM"/>
+            <declare name="SINAV1, SINAV2, PERFORMANS1, PERFORMANS2, ORTALAMA" type="Integer" array="False" size=""/>
+            <output expression="&quot;B&#304;R&#304;NC&#304; SINAV NOTU?&quot;" newline="True"/>
+            <input variable="SINAV1"/>
+            <output expression="&quot;&#304;K&#304;NC&#304; SINAV NOTU?&quot;" newline="True"/>
+            <input variable="SINAV2"/>
+            <output expression="&quot;B&#304;R&#304;NC&#304; PERFORMANS NOTU?&quot;" newline="True"/>
+            <input variable="PERFORMANS1"/>
+            <output expression="&quot;&#304;K&#304;NC&#304; PERFORMANS NOTU?&quot;" newline="True"/>
+            <input variable="PERFORMANS2"/>
+            <assign variable="ORTALAMA" expression="(SINAV1+SINAV2+PERFORMANS1+PERFORMANS2)/4"/>
+            <if expression="ORTALAMA&gt;=85">
+                <then>
+                    <output expression="&quot; TEBR&#304;KLER TAKD&#304;R BELGES&#304; ALDINIZ NOTUNUZ &quot; &amp; ORTALAMA" newline="True"/>
+                </then>
+                <else>
+                    <if expression="ORTALAMA&gt;=70">
+                        <then>
+                            <output expression="&quot; TEBR&#304;KLER TE&#350;EKK&#220;R BELGES&#304; ALDINIZ NOTUNUZ &quot; &amp; ORTALAMA" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="ORTALAMA&gt;=50">
+                                <then>
+                                    <output expression="&quot; SINIFI GE&#199;T&#304;N&#304;Z NOTUNUZ &quot; &amp; ORTALAMA" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot; SINIFTA KALDINIZ NOTUNUZ &quot; &amp; ORTALAMA" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

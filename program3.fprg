@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-21 07:52:13 &#214;S"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLU03RzVEQjE7MjAxOS0xMC0yMTswNzo0NzowOSDDllM7MjgzNA=="/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLU03RzVEQjE7MjAxOS0xMC0yMTswNzo1MjoxMyDDllM7MTsyOTMz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="KLAVYEDEN G&#304;R&#304;LEN SAYININ TEK VEYA &#199;&#304;FT OLMA DURUMUNU &#304;NCELEYEN PROGRAM.&#13;&#10;"/>
+            <declare name="sayi" type="Integer" array="False" size=""/>
+            <output expression="&quot;say&#305;y&#305; girin&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <if expression="sayi==0">
+                <then>
+                    <output expression="&quot;s&#305;f&#305;r say&#305;s&#305;nda teklik &#231;iftlik aranmaz&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="sayi%2==0">
+                        <then>
+                            <output expression="&quot;say&#305; &#231;ifttir&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;say&#305; tektir&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

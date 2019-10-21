@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-21 07:47:04 &#214;S"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLU03RzVEQjE7MjAxOS0xMC0yMTswNzozOToyOSDDllM7MjgzNw=="/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLU03RzVEQjE7MjAxOS0xMC0yMTswNzo0NzowNCDDllM7MTsyOTM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="su s&#305;cakl&#305;&#287;&#305;na g&#246;re maddenin halini bulan program"/>
+            <declare name="sus&#305;cakl&#305;g&#305;" type="Integer" array="False" size=""/>
+            <output expression="&quot;suyun s&#305;cakl&#305;k de&#287;eri ka&#231;t&#305;r?&quot;" newline="True"/>
+            <input variable="sus&#305;cakl&#305;g&#305;"/>
+            <if expression="sus&#305;cakl&#305;g&#305;&lt;0">
+                <then>
+                    <output expression="&quot; madde kat&#305;d&#305;r. &quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="sus&#305;cakl&#305;g&#305;&gt;100">
+                        <then>
+                            <output expression="&quot; madde gazd&#305;r. &quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot; madde s&#305;v&#305;d&#305;r. &quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
