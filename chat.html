@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoğraf Galerisi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            width: calc(33.33% - 20px); /* 3 resim yan yana ve marginlarla birlikte %100'e eşit olacak şekilde ayarlandı */
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px; /* Maksimum genişlik belirlendi */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Modal Stilleri */
+        #modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        #tamEkranResim {
+            width: 80%;
+            max-width: 700px;
+            margin: auto;
+            display: block;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fotoğraf Galerisi</h1>
+</header>
+
+<div class="gallery-container">
+    <div class="gallery-item">
+        <img class="resim" src="man-890887_640.jpg" alt="Resim 1">
+    </div>
+    <div class="gallery-item">
+        <img class="resim" src="people-2576110_640.jpg" alt="Resim 2" >
+    </div>
+    <div class="gallery-item">
+        <img class="resim" src="tattoo-1346114_640.jpg" alt="Resim 3">
+    </div>
+    <div class="gallery-item">
+        <img class="resim" src="woman-1867485_640.jpg" alt="Resim 4">
+    </div>
+    <div class="gallery-item">
+        <img class="resim" src="woman-4123270_640 (1).jpg" alt="Resim 5">
+    </div>
+    <div class="gallery-item">
+        <img class="resim" src="adult-1867489_640.jpg" alt="Resim 6">
+    </div>
+    
+    <!-- İsterseniz daha fazla resim ekleyebilirsiniz -->
+</div>
+
+<!-- Modal -->
+<div id="modal">
+    <img id="tamEkranResim" src="" alt="Tam Ekran Resim">
+</div>
+
+<!-- jQuery ve JavaScript bağlantısı -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Resime tıklandığında
+        $(".resim").click(function () {
+            // Tam ekran resmi modal içinde göster
+            var tamEkranResimSrc = $(this).attr("src");
+            $("#tamEkranResim").attr("src", tamEkranResimSrc);
+            $("#modal").fadeIn(300);
+        });
+
+        // Modal dışına tıklandığında modalı kapat
+        $("#modal").click(function () {
+            $(this).fadeOut(300);
+        });
+    });
+</script>
+
+</body>
+</html>
